@@ -12,6 +12,7 @@ public class BasicofTestNG {
         driver.manage().window().maximize();
         Thread.sleep(3000);
         driver.close();
+        driver.quit();
     }
 
 }
