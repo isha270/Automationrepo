@@ -11,7 +11,7 @@ public class BasicofTestNG {
         driver.get("https://jqueryui.com/datepicker/");
         driver.manage().window().maximize();
         Thread.sleep(3000);
-        driver.quit();
+        driver.close();
     }
 
 }
