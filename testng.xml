@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <listeners>
+  <!--  <listeners>
         <listener class-name="iRetryAnalyzer.rerunFailedTestCases"></listener>
-    </listeners>
+    </listeners>-->
     <test verbose="2" preserve-order="true" name="C:/Users/ishag/IdeaProjects/MavenProject">
       
         <parameter name="a" value="standard_user"></parameter>
