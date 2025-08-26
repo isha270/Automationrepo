@@ -11,19 +11,21 @@ pipeline {
                 echo 'Deploy World'
             }
         }
-          stage('Test') {
+        stage('Test') {
             steps {
                 echo 'Test World'
             }
         }
     }
-post {
-    always {
-        emailext (
-            subject: "Pipeline Result: ${currentBuild.currentResult}",
-            body: "Build status: ${currentBuild.currentResult}\nSee console: ${env.BUILD_URL}",
-            to: "ishagupta2719@gmail.com",
-            from: "ishagupta2719@gmail.com"
-        )
+    post {
+        always {
+            emailext (
+                subject: "Pipeline Result: ${currentBuild.currentResult}",
+                body: "Build status: ${currentBuild.currentResult}\nSee console: ${env.BUILD_URL}",
+                to: "ishagupta2719@gmail.com",
+                replyTo: "ishagupta2719@gmail.com",
+                mimeType: 'text/plain'
+            )
+        }
     }
 }
